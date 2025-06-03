@@ -107,7 +107,7 @@ class IoReactNativeCrypto: NSObject {
     // Key ACL
     guard let access = SecAccessControlCreateWithFlags(
       kCFAllocatorDefault,
-      kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
+      kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly,
       .privateKeyUsage, // signing and verification
       &error
     ) else {
